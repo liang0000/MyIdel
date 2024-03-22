@@ -14,8 +14,6 @@ struct ContentView: View {
 	@Environment(\.openImmersiveSpace) var openImmersiveSpace
 	@Environment(\.dismissImmersiveSpace) var dismissImmersiveSpace
 	
-	let url = URL(string: "https://build.spline.design/nuD7FiyAb-wjFB7DRDbQ/scene.splineswift")!
-	
     var body: some View {
         VStack {
 			CharacterView()
@@ -53,7 +51,7 @@ struct CharacterView: View {
 	var body: some View {
 		let url = URL(string: "https://build.spline.design/nuD7FiyAb-wjFB7DRDbQ/scene.splineswift")!
 		
-		try? SplineView(sceneFileURL: url).ignoresSafeArea(.all)
+		try? SplineView(sceneFileURL: url)
 	}
 }
 
