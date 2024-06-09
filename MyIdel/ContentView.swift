@@ -4,69 +4,50 @@
 import SwiftUI
 import RealityKit
 import RealityKitContent
-import SplineRuntime
 
 struct ContentView: View {
-	@State var isShowVolume = false
-	@State var isShowImmersiveSpace = false
-	@Environment(\.openWindow) var openWindow
-	@Environment(\.dismissWindow) var dismissWindow
-	@Environment(\.openImmersiveSpace) var openImmersiveSpace
-	@Environment(\.dismissImmersiveSpace) var dismissImmersiveSpace
+	@Environment(\.openWindow) private var openWindow
+	@State private var selectedCreature: SeaCreature?
+	@State private var selectedCharacter: Bool = false
 	
-    var body: some View {
-        VStack {
-			CharacterView()
-			
-			HStack {
-				Toggle("Show Volume", isOn: $isShowVolume)
-					.toggleStyle(.button)
-					.onChange(of: isShowVolume) { _, isShow in
-						isShow ? openWindow(id: "volume") : dismissWindow(id: "volume")
-					}
-				
-				Toggle("Show Immersive", isOn: $isShowImmersiveSpace)
-					.toggleStyle(.button)
-					.onChange(of: isShowImmersiveSpace) { _, isShow in
-						Task {
-							if isShow {
-								await openImmersiveSpace(id: "immersiveSpace")
-							} else {
-								await dismissImmersiveSpace()
-							}
-						}
-					}
+	var body: some View {
+		NavigationSplitView {
+			List {
+				Button("Character") {
+					selectedCreature = nil
+					selectedCharacter = true
+				}
+				ForEach(SeaCreature.seaCreatures) { creature in
+					Button(action: {
+						selectedCreature = creature
+						selectedCharacter = false
+					}, label: {
+						Text(creature.name)
+					})
+				}
 			}
-			.padding()
-        }
-        .padding()
-    }
+			.navigationTitle("Models")
+		} detail: {
+			if selectedCharacter {
+				CharacterView()
+			} else if let selectedCreature {
+				Model3D(named: selectedCreature.modelName, bundle: realityKitContentBundle)
+					.navigationTitle(selectedCreature.name)
+					.toolbar {
+						Button(action: {
+							openWindow(id: "creatureWindow", value: selectedCreature.modelName)
+						}, label: {
+							Text("View \(selectedCreature.name)")
+						})
+					}
+			} else {
+				Text("Select a model")
+			}
+		}
+		.frame(minWidth: 700, minHeight: 700)
+	}
 }
 
 #Preview(windowStyle: .automatic) {
-    ContentView()
-}
-
-struct CharacterView: View {
-	var body: some View {
-		let url = URL(string: "https://build.spline.design/nuD7FiyAb-wjFB7DRDbQ/scene.splineswift")!
-		
-		try? SplineView(sceneFileURL: url)
-	}
-}
-
-struct VolumeView: View {
-	var body: some View {
-		let url = URL(string: "https://build.spline.design/nuD7FiyAb-wjFB7DRDbQ/scene.splineswift")!
-		
-		SplineVolumetricContent(sceneFileURL: url)
-	}
-}
-
-struct ImmersiveView: ImmersiveSpaceContent {
-	var body: some ImmersiveSpaceContent {
-		let url = URL(string: "https://build.spline.design/I8Hnv-UYExjd-L3eQLm9/scene.splineswift")!
-		
-		SplineImmersiveSpaceContent(sceneFileURL: url)
-	}
+	ContentView()
 }
