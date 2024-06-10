@@ -16,6 +16,7 @@
 		B6C8F4BC2C15FC4700EA8886 /* CharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C8F4BB2C15FC4700EA8886 /* CharacterView.swift */; };
 		B6C8F4BE2C15FC5200EA8886 /* SeaCreatureDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C8F4BD2C15FC5200EA8886 /* SeaCreatureDetailView.swift */; };
 		B6C8F4C02C15FC7000EA8886 /* SeaCreature.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C8F4BF2C15FC7000EA8886 /* SeaCreature.swift */; };
+		B6C8F4CD2C16A16000EA8886 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C8F4CC2C16A16000EA8886 /* CircleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		B6C8F4BB2C15FC4700EA8886 /* CharacterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterView.swift; sourceTree = "<group>"; };
 		B6C8F4BD2C15FC5200EA8886 /* SeaCreatureDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeaCreatureDetailView.swift; sourceTree = "<group>"; };
 		B6C8F4BF2C15FC7000EA8886 /* SeaCreature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeaCreature.swift; sourceTree = "<group>"; };
+		B6C8F4CC2C16A16000EA8886 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				B6C8F4BB2C15FC4700EA8886 /* CharacterView.swift */,
 				B6C8F4BD2C15FC5200EA8886 /* SeaCreatureDetailView.swift */,
 				B6C8F4BF2C15FC7000EA8886 /* SeaCreature.swift */,
+				B6C8F4CC2C16A16000EA8886 /* CircleView.swift */,
 				B649F6222BAD534F00BBD91C /* Assets.xcassets */,
 				B649F6272BAD534F00BBD91C /* Info.plist */,
 				B649F6242BAD534F00BBD91C /* Preview Content */,
@@ -169,6 +172,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6C8F4CD2C16A16000EA8886 /* CircleView.swift in Sources */,
 				B6C8F4BE2C15FC5200EA8886 /* SeaCreatureDetailView.swift in Sources */,
 				B6C8F4BC2C15FC4700EA8886 /* CharacterView.swift in Sources */,
 				B6C8F4C02C15FC7000EA8886 /* SeaCreature.swift in Sources */,
