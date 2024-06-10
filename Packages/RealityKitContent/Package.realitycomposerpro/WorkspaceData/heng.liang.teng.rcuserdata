@@ -1,0 +1,61 @@
+{
+  "advancedEditorSelectedIdentifier" : "ProjectBrowser",
+  "openSceneRelativePaths" : [
+    "ClamScene.usda",
+    "SlugScene.usda"
+  ],
+  "recentIdentifiers" : {
+
+  },
+  "sceneCameraHistory" : {
+    "8EF3AB54-7031-4973-AF03-02C05F34C834" : [
+      {
+        "date" : 739681108.314047,
+        "title" : "Untitled",
+        "transform" : [
+          0.99999994,
+          0,
+          -0,
+          0,
+          -0,
+          0.8744566,
+          -0.48510376,
+          0,
+          0,
+          0.48510376,
+          0.8744566,
+          0,
+          0,
+          0.42953882,
+          0.6788341,
+          1
+        ]
+      }
+    ],
+    "A48C46E1-DA05-469A-A76D-84E355CAA4CD" : [
+      {
+        "date" : 739681014.363551,
+        "title" : "Untitled",
+        "transform" : [
+          1,
+          0,
+          -0,
+          0,
+          -0,
+          0.8660253,
+          -0.5000002,
+          0,
+          0,
+          0.5000002,
+          0.8660253,
+          0,
+          -1.0251997e-05,
+          0.34314787,
+          0.53562963,
+          1
+        ]
+      }
+    ]
+  },
+  "selectedSceneRelativePath" : "ClamScene.usda"
+}
