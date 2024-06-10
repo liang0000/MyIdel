@@ -18,12 +18,10 @@ struct ContentView: View {
 					selectedCharacter = true
 				}
 				ForEach(SeaCreature.seaCreatures) { creature in
-					Button(action: {
+					Button(creature.name) {
 						selectedCreature = creature
 						selectedCharacter = false
-					}, label: {
-						Text(creature.name)
-					})
+					}
 				}
 			}
 			.navigationTitle("Models")
@@ -34,11 +32,9 @@ struct ContentView: View {
 				Model3D(named: selectedCreature.modelName, bundle: realityKitContentBundle)
 					.navigationTitle(selectedCreature.name)
 					.toolbar {
-						Button(action: {
+						Button("View \(selectedCreature.name)") {
 							openWindow(id: "creatureWindow", value: selectedCreature.modelName)
-						}, label: {
-							Text("View \(selectedCreature.name)")
-						})
+						}
 					}
 			} else {
 				Text("Select a model")

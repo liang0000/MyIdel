@@ -2,7 +2,8 @@
   "advancedEditorSelectedIdentifier" : "ProjectBrowser",
   "openSceneRelativePaths" : [
     "ClamScene.usda",
-    "SlugScene.usda"
+    "SlugScene.usda",
+    "Scene.usda"
   ],
   "recentIdentifiers" : {
 
@@ -32,6 +33,74 @@
         ]
       }
     ],
+    "26DBAE76-5DD8-47B6-A085-1B4ADA111097" : [
+      {
+        "date" : 739681699.279551,
+        "title" : "Untitled",
+        "transform" : [
+          0.9913212,
+          3.235745e-11,
+          0.13146147,
+          0,
+          0.05233186,
+          0.9173517,
+          -0.39462277,
+          0,
+          -0.12059641,
+          0.39807755,
+          0.9093903,
+          0,
+          -0.054391455,
+          0.17943218,
+          0.41015372,
+          1
+        ]
+      },
+      {
+        "date" : 739681691.610406,
+        "title" : "Untitled",
+        "transform" : [
+          0.99904865,
+          3.1669112e-12,
+          0.043608822,
+          0,
+          0.019017056,
+          0.8999065,
+          -0.43566787,
+          0,
+          -0.039243866,
+          0.43608272,
+          0.8990504,
+          0,
+          -0.017699989,
+          0.19657339,
+          0.40549475,
+          1
+        ]
+      },
+      {
+        "date" : 739681686.905382,
+        "title" : "Untitled",
+        "transform" : [
+          0.99999994,
+          0,
+          -0,
+          0,
+          -0,
+          0.8660254,
+          -0.49999988,
+          0,
+          0,
+          0.49999988,
+          0.8660254,
+          0,
+          0,
+          0.22540194,
+          0.39060763,
+          1
+        ]
+      }
+    ],
     "A48C46E1-DA05-469A-A76D-84E355CAA4CD" : [
       {
         "date" : 739681014.363551,
@@ -57,5 +126,5 @@
       }
     ]
   },
-  "selectedSceneRelativePath" : "ClamScene.usda"
+  "selectedSceneRelativePath" : "Scene.usda"
 }
